@@ -60,7 +60,7 @@ Ask the user whether this is primarily a reading deck or a speaking deck, then d
 | **Low density / speaker-led** | Public talks, keynote-style sharing, live explanation | One idea per slide, large type, strong visual hierarchy, generous negative space, 1-3 bullets max, more slides if needed |
 | **High density / reading-first** | Reports, handouts, async review, detailed internal docs | More self-contained slides, structured grids/tables/annotations, 4-8 bullets or 4-6 cards when readable, tighter but still intentional spacing |
 
-Baseline limits still apply: no scrolling, no overflow, no overlapping panels, and no text below comfortable reading size. If content exceeds the selected density mode, split it into more slides instead of shrinking until it becomes cramped.
+Keep text legible and the stage free of scrolling, overflow and overlapping panels. Reflow a crowded layout first. Split slides only when the requested scope allows a change in slide count.
 
 ---
 
@@ -77,18 +77,18 @@ Determine what the user wants:
 When enhancing existing presentations, fixed-stage fitting is the biggest risk:
 
 1. **Before adding content:** Count existing elements, check against density limits
-2. **Adding images:** Fit them inside the 1920×1080 slide canvas. If slide already has max content, split into two slides
-3. **Adding text:** Max 4-6 bullets per slide. Exceeds limits? Split into continuation slides
+2. **Adding images:** Fit them inside the 1920×1080 slide canvas, adjusting the image crop, caption placement and adjacent text within the permitted edit scope.
+3. **Adding text:** Treat 4–6 bullets as a density cue. Use the template's hierarchy and available space before considering a continuation.
 4. **After ANY modification, verify:** the slide stage remains 16:9, no text overflows its card, no panels overlap, and screenshots look correct at 1280×720 plus one phone viewport
-5. **Proactively reorganize:** If modifications will cause overflow, automatically split content and inform the user. Don't wait to be asked
+5. **Honor fixed pagination:** When the user fixes page count, order or edit scope, keep those constraints. If required content cannot fit legibly after the permitted changes, identify the specific conflict before changing scope.
 
-**When adding images to existing slides:** Move image to a new slide or reduce other content first. Never add images without checking if existing content already fills the 1920×1080 slide stage.
+Check the rendered page after placing an image; keep existing evidence and captions legible.
 
 ---
 
 ## Phase 1: Content Discovery (New Presentations)
 
-**Ask ALL questions together** so the user fills everything out at once. If the current environment provides a native structured-question UI, use it; otherwise ask in one concise message with clearly numbered choices:
+Use the brief, supplied deck and source materials to establish the following details. Ask together only for missing choices that materially affect the deck.
 
 **Question 1 — Purpose** (header: "Purpose"):
 What is this presentation for? Options: Pitch deck / Teaching-Tutorial / Conference talk / Internal presentation
@@ -109,7 +109,7 @@ How dense should the deck feel? Options:
 
 Remember the user's density choice. It affects slide count, typography scale, amount of text per slide, layout density, and whether to favor cinematic presenter slides or self-contained reading slides.
 
-If user has content, ask them to share it.
+Use supplied content directly. Ask for missing material only when needed.
 
 ### Step 1.2: Image Evaluation (if images provided)
 
@@ -128,6 +128,8 @@ If user provides an image folder:
 ---
 
 ## Phase 2: Style Discovery
+
+When the user has chosen a template or asked to preserve an existing deck's style, use that direction and proceed to Phase 3. For a technical deck, try the supplied layout on a representative figure-heavy or comparison page first: check whether the audience can read the labels and relate each claim to its figure. Carry that result into the deck without adding an approval step. Use the preview choices below when the style is still open.
 
 **This is the "show, don't tell" phase.** Most people can't articulate design preferences in words.
 
@@ -201,7 +203,7 @@ If "Mix elements", ask for specifics.
 
 ## Phase 3: Generate Presentation
 
-Generate the full presentation using content from Phase 1 (text, or text + curated images) and style from Phase 2.
+Generate the full presentation using the supplied or discovered content and the requested or selected style.
 
 If images were provided, the slide outline already incorporates them from Step 1.2. If not, CSS-generated visuals (gradients, shapes, patterns) provide visual interest — this is a fully supported first-class path.
 
@@ -212,7 +214,7 @@ Apply the user's density choice throughout the deck:
 
 If the user's stated needs are mixed, choose the closer of the two modes instead of inventing a middle option: live audience persuasion defaults low-density; async circulation or detailed review defaults high-density.
 
-Never let high density become visual clutter. If a high-density slide starts to overflow, split it or redesign it into a clearer structure.
+If a high-density slide overflows, redesign its layout and check the rendered result. Use a continuation slide when the page count is flexible.
 
 If the user selected a bold template from `bold-template-pack`, read that one template's full `design.md` before generating. Do not read the other bold templates. Treat `design.md` as the design recipe:
 

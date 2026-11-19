@@ -1,14 +1,18 @@
 ---
 name: academic-search
 description: |
-  项目研究起步、问题尚未明确时的已有材料阅读与问题梳理，以及学术论文搜索、引用分析、开放获取 PDF 判定与结构化元数据提取。研究起步先读现有少量材料，非计算机领域提醒用户自行检索下载、共同精选，再通过 Zotero 高亮注释迭代。Use when the user asks to search/find papers, do literature review/survey/systematic review/PRISMA work, get citation counts, export BibTeX/RIS-style references, find papers by author, inspect PDF/open-access availability, or work with arXiv, Semantic Scholar, OpenAlex, Crossref, Unpaywall, PubMed, Google Scholar, ACM DL, IEEE Xplore, Papers with Code, CNKI, ScienceDirect, Wiley, Springer, ACS, MeSH, JEL, MSC, or ACM CCS.
+  项目研究起步、问题尚未明确时的已有材料阅读与问题梳理，已选论文的方法与代码精读、最小对照实验设计，以及学术论文搜索、引用分析、开放获取 PDF 判定与结构化元数据提取。刚入门时可用专家工作示例带读；研究起步先读现有少量材料，非计算机领域提醒用户自行检索下载、共同精选，再通过 Zotero 高亮注释迭代。Use when the user asks to search/find papers, do literature review/survey/systematic review/PRISMA work, get citation counts, export BibTeX/RIS-style references, find papers by author, inspect PDF/open-access availability, or work with arXiv, Semantic Scholar, OpenAlex, Crossref, Unpaywall, PubMed, Google Scholar, ACM DL, IEEE Xplore, Papers with Code, CNKI, ScienceDirect, Wiley, Springer, ACS, MeSH, JEL, MSC, or ACM CCS.
 metadata:
-  version: "1.2.2"
+  version: "1.2.4"
 ---
 
 # academic-search Skill
 
+用户已选定论文，想弄懂方法图或代码、比较自己的方案，或从阅读转入最小实验设计时，参见[从论文方法到一个可检验的问题](references/workflows/method-and-experiment.md)。围绕当前疑问回答。
+
 ## 先判断研究阶段
+
+用户说刚入门、第一次做这类任务，或想知道行内人会怎样下手时，可先按[入门示范](references/workflows/problem-first-reading.md#入门时先看一个做法)带着走一遍。
 
 用户只有项目主题、问题尚不明确，或希望先理解少量材料再定探索方向时，先使用 [项目起步与阅读迭代](references/workflows/problem-first-reading.md)，再判断是否需要外部检索。先读完当前少量已有相关材料；无材料则先讨论或借鉴其他项目经验，不要求用户先交出成熟研究问题。
 
